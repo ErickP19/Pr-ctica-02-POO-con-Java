@@ -9,6 +9,48 @@ package ec.ups.edu.clases;
  *
  * @author erics
  */
-public class JugadorExtra {
+public final class JugadorExtra extends Jugador {
     
+        private Jugador jugador;
+        private String lugardeNacimiento;
+        private double peso;
+        private boolean titularsuplente;
+
+    public Jugador getJugador() {
+        return jugador;
+    }
+
+    public void setJugador(Jugador jugador) {
+        this.jugador = jugador;
+    }
+
+    public String getLugardeNacimiento() {
+        return lugardeNacimiento;
+    }
+
+    public void setLugardeNacimiento(String lugardeNacimiento) {
+        this.lugardeNacimiento = lugardeNacimiento;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    public boolean isTitularsuplente() {
+        return titularsuplente;
+    }
+
+    public void setTitularsuplente(boolean titularsuplente) {
+        this.titularsuplente = titularsuplente;
+    }
+
+    @Override
+    public String toString() {
+        return "JugadorExtra{" + "jugador=" + jugador + ", lugardeNacimiento=" + lugardeNacimiento + ", peso=" + peso + ", titularsuplente=" + titularsuplente + '}';
+    }
+        
 }
