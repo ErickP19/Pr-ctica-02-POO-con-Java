@@ -8,13 +8,24 @@ package ec.ups.edu.clases;
 /**
  *
  * @author erics
+ * @since 14-April-2019
+ * @version IDE 8.2
+ *      Clase padre 1
  */
-public abstract class  Entrenador {
+public abstract class  Entrenador extends Persona{
    
     private Persona persona;
     private double sueldo;
     private int edad;
     private String recomendaciones;
+    
+    public Entrenador(Persona persona, double sueldo, int edad, String recomendaciones, int codigo, String nombre, String cedula, int telefono, String direccion, String correo) {
+        super(codigo, nombre, cedula, telefono, direccion, correo);
+        this.persona = persona;
+        this.sueldo = sueldo;
+        this.edad = edad;
+        this.recomendaciones = recomendaciones;
+    }
 
     public double getSueldo() {
         return sueldo;
@@ -47,11 +58,14 @@ public abstract class  Entrenador {
     public void setPersona(Persona persona) {
         this.persona = persona;
     }
+    public abstract double calcularSueldo();
 
     @Override
     public String toString() {
-        return "Entrenador{" + "persona=" + persona + ", sueldo=" + sueldo + ", edad=" + edad + ", recomendaciones=" + recomendaciones + '}';
+        return super.toString()+"Entrenador{" + "persona=" + persona + ", sueldo=" + sueldo + ", edad=" + edad + ", recomendaciones=" + recomendaciones + '}';
     }
+
+   
     
     
 }

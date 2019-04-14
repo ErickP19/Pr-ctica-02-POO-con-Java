@@ -8,8 +8,11 @@ package ec.ups.edu.clases;
 /**
  *
  * @author erics
- */
-public class Persona {
+ * @since 14-April-2019
+ * @version IDE 8.2
+ *            Clase Abuelo 
+ */ 
+public  class Persona   {
     
     private int codigo;
     private String nombre;
@@ -17,6 +20,21 @@ public class Persona {
     private int telefono;
     private  String direccion;
     private String correo;
+    
+         //contructor
+    public Persona(int codigo, String nombre, String cedula, int telefono, String direccion, String correo)
+    {
+   
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.cedula = cedula;
+        this.telefono = telefono;
+        this.direccion = direccion;
+        this.correo = correo;
+    }
+
+    
+    //get and set
 
     public int getCodigo() {
         return codigo;

@@ -5,13 +5,15 @@
  */
 package ec.ups.edu.clases;
 
+import ec.ups.edu.interfaces.Principal;
 import java.util.Date;
+import java.util.Scanner;
 
 /**
  *
  * @author erics
  */
-public final class EntrenadorPersonal extends Entrenador {
+public final class EntrenadorPersonal extends Entrenador implements Principal{
 
         private Entrenador entrenador;
         private String titulo;
@@ -19,6 +21,20 @@ public final class EntrenadorPersonal extends Entrenador {
         private String rutina;
         private Date fechadeContratacion;
         private Date vencimientoContrato;
+        
+        //constructor
+
+    public EntrenadorPersonal(Entrenador entrenador, String titulo, String tipoIdioma, String rutina, Date fechadeContratacion, Date vencimientoContrato, Persona persona, double sueldo, int edad, String recomendaciones, int codigo, String nombre, String cedula, int telefono, String direccion, String correo) {
+        super(persona, sueldo, edad, recomendaciones, codigo, nombre, cedula, telefono, direccion, correo);
+        this.entrenador = entrenador;
+        this.titulo = titulo;
+        this.tipoIdioma = tipoIdioma;
+        this.rutina = rutina;
+        this.fechadeContratacion = fechadeContratacion;
+        this.vencimientoContrato = vencimientoContrato;
+    }
+    
+        //get and set
 
     public Entrenador getEntrenador() {
         return entrenador;
@@ -70,7 +86,27 @@ public final class EntrenadorPersonal extends Entrenador {
 
     @Override
     public String toString() {
-        return "EntrenadorPersonal{" + "entrenador=" + entrenador + ", titulo=" + titulo + ", tipoIdioma=" + tipoIdioma + ", rutina=" + rutina + ", fechadeContratacion=" + fechadeContratacion + ", vencimientoContrato=" + vencimientoContrato + '}';
+        return super.toString()+"EntrenadorPersonal{" + "entrenador=" + entrenador + ", titulo=" + titulo + ", tipoIdioma=" + tipoIdioma + ", rutina=" + rutina + ", fechadeContratacion=" + fechadeContratacion + ", vencimientoContrato=" + vencimientoContrato + '}';
     }
-                
-}
+     public static int pedirHoras(){
+		Scanner teclado = new Scanner(System.in);
+		System.out.print("Introduce las horas que ha trabajado: ");
+		int horas = teclado.nextInt();
+		return horas;
+	}     
+    public double calcularSueldo(){
+        int resultado = 0, horasExtra = 0; 						
+		final int horasNormales = 35;
+		if (pedirHoras() <= 35){			
+			resultado = pedirHoras() * 15;		
+		} else{		
+			horasExtra = (pedirHoras() - 35) * 22;		
+			resultado = horasNormales * 15 + horasExtra;	
+		}
+		return resultado;
+	}
+        
+    }
+
+  
+

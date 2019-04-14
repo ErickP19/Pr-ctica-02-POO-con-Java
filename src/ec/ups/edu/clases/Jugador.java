@@ -8,8 +8,11 @@ package ec.ups.edu.clases;
 /**
  *
  * @author erics
+ * @since 14-April-2019
+ * @version IDE 8.2
+ *          Clase padre 2
  */
-public abstract class Jugador {
+public abstract class Jugador extends Persona {
 
         private int edad ;
         private double estatura;
@@ -17,6 +20,17 @@ public abstract class Jugador {
         private String posiciondeJuego;
         private Persona persona;
 
+        //constructor
+    public Jugador(int edad, double estatura, double salario, String posiciondeJuego, Persona persona, int codigo, String nombre, String cedula, int telefono, String direccion, String correo) {
+        super(codigo, nombre, cedula, telefono, direccion, correo);
+        this.edad = edad;
+        this.estatura = estatura;
+        this.salario = salario;
+        this.posiciondeJuego = posiciondeJuego;
+        this.persona = persona;
+    }
+       
+    //get and set
     public int getEdad() {
         return edad;
     }
@@ -56,10 +70,11 @@ public abstract class Jugador {
     public void setPersona(Persona persona) {
         this.persona = persona;
     }
+    public abstract int calcularEdad();
 
     @Override
     public String toString() {
-        return "Jugador{" + "edad=" + edad + ", estatura=" + estatura + ", salario=" + salario + ", posiciondeJuego=" + posiciondeJuego + ", persona=" + persona + '}';
+        return super.toString()+"Jugador{" + "edad=" + edad + ", estatura=" + estatura + ", salario=" + salario + ", posiciondeJuego=" + posiciondeJuego + ", persona=" + persona + '}';
     }
         
 }
