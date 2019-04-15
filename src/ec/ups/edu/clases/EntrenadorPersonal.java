@@ -27,8 +27,7 @@ public final class EntrenadorPersonal extends Entrenador implements Principal{
     public EntrenadorPersonal(Entrenador entrenador, String titulo, String tipoIdioma, String rutina, Date fechadeContratacion, Date vencimientoContrato, Persona persona, double sueldo, int edad, String recomendaciones, int codigo, String nombre, String cedula, int telefono, String direccion, String correo) {
         super(persona, sueldo, edad, recomendaciones, codigo, nombre, cedula, telefono, direccion, correo);
         
-    }
-    
+    } 
         //get and set
 
     public Entrenador getEntrenador() {
