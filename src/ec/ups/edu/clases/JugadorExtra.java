@@ -13,28 +13,21 @@ import ec.ups.edu.interfaces.Principal;
  */
 public final class JugadorExtra extends Jugador implements Principal{
     
-        private Jugador jugador;
+     
         private String lugardeNacimiento;
         private double peso;
         private boolean titularsuplente;
             //constructor
-    public JugadorExtra(Jugador jugador, String lugardeNacimiento, double peso, boolean titularsuplente, int edad, double estatura, double salario, String posiciondeJuego, Persona persona, int codigo, String nombre, String cedula, int telefono, String direccion, String correo) {
-        super(edad, estatura, salario, posiciondeJuego, persona, codigo, nombre, cedula, telefono, direccion, correo);
-        this.jugador = jugador;
+
+    public JugadorExtra(String lugardeNacimiento, double peso, boolean titularsuplente, int edad, double estatura, double salario, String posiciondeJuego, int codigo, String nombre, String cedula, int telefono, String direccion, String correo) {
+        super(edad, estatura, salario, posiciondeJuego, codigo, nombre, cedula, telefono, direccion, correo);
         this.lugardeNacimiento = lugardeNacimiento;
         this.peso = peso;
         this.titularsuplente = titularsuplente;
     }
    
+   
         //get and set
-
-    public Jugador getJugador() {
-        return jugador;
-    }
-
-    public void setJugador(Jugador jugador) {
-        this.jugador = jugador;
-    }
 
     public String getLugardeNacimiento() {
         return lugardeNacimiento;
@@ -62,7 +55,7 @@ public final class JugadorExtra extends Jugador implements Principal{
 
     @Override
     public String toString() {
-        return super.toString()+ "JugadorExtra{" + "jugador=" + jugador + ", lugardeNacimiento=" + lugardeNacimiento + ", peso=" + peso + ", titularsuplente=" + titularsuplente + '}';
+        return super.toString()+ "JugadorExtra{" + ", lugardeNacimiento=" + lugardeNacimiento + ", peso=" + peso + ", titularsuplente=" + titularsuplente + '}';
     }
         
     public int calcularEdad(){

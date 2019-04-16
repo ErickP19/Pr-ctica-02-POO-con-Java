@@ -12,32 +12,25 @@ import java.util.Scanner;
 /**
  *
  * @author erics
+ *  Clase hija 1
  */
 public final class EntrenadorPersonal extends Entrenador implements Principal{
-
-        private Entrenador entrenador;
         private String titulo;
         private String tipoIdioma;
         private String rutina;
-        private Date fechadeContratacion;
-        private Date vencimientoContrato;
+       // private Date fechadeContratacion;
+    
         
         //constructor
 
-    public EntrenadorPersonal(Entrenador entrenador, String titulo, String tipoIdioma, String rutina, Date fechadeContratacion, Date vencimientoContrato, Persona persona, double sueldo, int edad, String recomendaciones, int codigo, String nombre, String cedula, int telefono, String direccion, String correo) {
-        super(persona, sueldo, edad, recomendaciones, codigo, nombre, cedula, telefono, direccion, correo);
-        
-    } 
-        //get and set
-
-    public Entrenador getEntrenador() {
-        return entrenador;
+    public EntrenadorPersonal(String titulo, String tipoIdioma, String rutina, double sueldo, int edad, String recomendaciones, int codigo, String nombre, String cedula, int telefono, String direccion, String correo) {
+        super(sueldo, edad, recomendaciones, codigo, nombre, cedula, telefono, direccion, correo);
+        this.titulo = titulo;
+        this.tipoIdioma = tipoIdioma;
+        this.rutina = rutina;
     }
 
-    public void setEntrenador(Entrenador entrenador) {
-        this.entrenador = entrenador;
-    }
-
+    //get and set
     public String getTitulo() {
         return titulo;
     }
@@ -61,27 +54,25 @@ public final class EntrenadorPersonal extends Entrenador implements Principal{
     public void setRutina(String rutina) {
         this.rutina = rutina;
     }
-
-    public Date getFechadeContratacion() {
-        return fechadeContratacion;
+    public String comer() {
+        return "\tEl Entrenador " + this.getNombre() + " está comiendo";
     }
 
-    public void setFechadeContratacion(Date fechadeContratacion) {
-        this.fechadeContratacion = fechadeContratacion;
+   
+    public String descansar() {
+        return "\tEl Entrenador " + this.getNombre() + " está descansando";
     }
 
-    public Date getVencimientoContrato() {
-        return vencimientoContrato;
+    public String trabajar() {
+        return "\tEl Entrenador " + this.getNombre() + " está trabajando";
     }
-
-    public void setVencimientoContrato(Date vencimientoContrato) {
-        this.vencimientoContrato = vencimientoContrato;
-    }
-
+    
     @Override
     public String toString() {
-        return super.toString()+"EntrenadorPersonal{" + "entrenador=" + entrenador + ", titulo=" + titulo + ", tipoIdioma=" + tipoIdioma + ", rutina=" + rutina + ", fechadeContratacion=" + fechadeContratacion + ", vencimientoContrato=" + vencimientoContrato + '}';
+        return super.toString()+"EntrenadorPersonal{" +  ", titulo=" + titulo + ", tipoIdioma=" + tipoIdioma + ", rutina=" + rutina  + '}';
     }
+    
+    
      public static int pedirHoras(){
 		Scanner teclado = new Scanner(System.in);
 		System.out.print("Introduce las horas que ha trabajado: ");

@@ -6,6 +6,7 @@
 package ec.ups.edu.clases;
 
 import ec.ups.edu.interfaces.Principal;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -15,30 +16,20 @@ import java.util.Scanner;
  */
 public final class EntrenadorPsicologico extends Entrenador implements Principal  {
    
-       private Entrenador entrenador;
+      
        private String titulo;
+       private String tituloCharlas;
        private Date FechaContratacion;
-       private Date vencimientoContrato;
+       
     // constructor
 
-    public EntrenadorPsicologico(Entrenador entrenador, String titulo, Date FechaContratacion, Date vencimientoContrato, Persona persona, double sueldo, int edad, String recomendaciones, int codigo, String nombre, String cedula, int telefono, String direccion, String correo) {
-        super(persona, sueldo, edad, recomendaciones, codigo, nombre, cedula, telefono, direccion, correo);
-        this.entrenador = entrenador;
+    public EntrenadorPsicologico(String titulo, String tituloCharlas, Date FechaContratacion, double sueldo, int edad, String recomendaciones, int codigo, String nombre, String cedula, int telefono, String direccion, String correo) {
+        super(sueldo, edad, recomendaciones, codigo, nombre, cedula, telefono, direccion, correo);
         this.titulo = titulo;
+        this.tituloCharlas = tituloCharlas;
         this.FechaContratacion = FechaContratacion;
-        this.vencimientoContrato = vencimientoContrato;
     }
-       
        // get and set
-
-    public Entrenador getEntrenador() {
-        return entrenador;
-    }
-
-    public void setEntrenador(Entrenador entrenador) {
-        this.entrenador = entrenador;
-    }
-
     public String getTitulo() {
         return titulo;
     }
@@ -55,17 +46,21 @@ public final class EntrenadorPsicologico extends Entrenador implements Principal
         this.FechaContratacion = FechaContratacion;
     }
 
-    public Date getVencimientoContrato() {
-        return vencimientoContrato;
+    public String comer() {
+        return "\tEntrenador Psicologico " + this.getNombre() + " está comiendo";
     }
 
-    public void setVencimientoContrato(Date vencimientoContrato) {
-        this.vencimientoContrato = vencimientoContrato;
+    public String descansar() {
+        return "\tEntrenador Psicologico  " + this.getNombre() + " está descansando";
+    }
+    public String verTelevision() {
+        return "\tEntrenador Psicologico  " + super.getNombre() + " está respondiendo mensajes";
     }
 
     @Override
     public String toString() {
-        return super.toString()+ "EntrenadorPsicologico{" + "entrenador=" + entrenador + ", titulo=" + titulo + ", FechaContratacion=" + FechaContratacion + ", vencimientoContrato=" + vencimientoContrato + '}';
+        SimpleDateFormat formato=new SimpleDateFormat("dd/MM/yyyy");
+        return super.toString()+ "EntrenadorPsicologico{" + ", titulo=" + titulo + ", FechaContratacion=" + formato.format(FechaContratacion.getTime()) +'}';
     }
     public static int pedirHoras(){
 		Scanner teclado = new Scanner(System.in);

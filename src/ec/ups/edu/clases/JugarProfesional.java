@@ -14,29 +14,22 @@ import java.util.Calendar;
  */
 public final class JugarProfesional extends Jugador implements Principal {
     
-        private Jugador jugador;
+        
         private String lugardeNacimiento;
         private double peso;
         private boolean titularsuplente;
         
         //constructor
 
-    public JugarProfesional(Jugador jugador, String lugardeNacimiento, double peso, boolean titularsuplente, int edad, double estatura, double salario, String posiciondeJuego, Persona persona, int codigo, String nombre, String cedula, int telefono, String direccion, String correo) {
-        super(edad, estatura, salario, posiciondeJuego, persona, codigo, nombre, cedula, telefono, direccion, correo);
-        this.jugador = jugador;
+    public JugarProfesional(String lugardeNacimiento, double peso, boolean titularsuplente, int edad, double estatura, double salario, String posiciondeJuego, int codigo, String nombre, String cedula, int telefono, String direccion, String correo) {
+        super(edad, estatura, salario, posiciondeJuego, codigo, nombre, cedula, telefono, direccion, correo);
         this.lugardeNacimiento = lugardeNacimiento;
         this.peso = peso;
         this.titularsuplente = titularsuplente;
     }
+
+    
         //get and set
-
-    public Jugador getJugador() {
-        return jugador;
-    }
-
-    public void setJugador(Jugador jugador) {
-        this.jugador = jugador;
-    }
 
     public String getLugardeNacimiento() {
         return lugardeNacimiento;
@@ -61,10 +54,21 @@ public final class JugarProfesional extends Jugador implements Principal {
     public void setTitularsuplente(boolean titularsuplente) {
         this.titularsuplente = titularsuplente;
     }
+     public String Entrenando() {
+        return "\tJugador Profesional " + this.getNombre() + "Esta Entrenando";
+    }
+
+    public String descansar() {
+        return "\tJugador Profesional  " + this.getNombre() + " está descansando";
+    }
+    public String Lesionaod() {
+        return "\tJugador Profesional " + super.getNombre() + " está indispuesto para jugar";
+    }
+
 
     @Override
     public String toString() {
-        return super.toString()+"JugarProfesional{" + "jugador=" + jugador + ", lugardeNacimiento=" + lugardeNacimiento + ", peso=" + peso + ", titularsuplente=" + titularsuplente + '}';
+        return super.toString()+"JugarProfesional{" + ", lugardeNacimiento=" + lugardeNacimiento + ", peso=" + peso + ", titularsuplente=" + titularsuplente + '}';
     }
         public int calcularEdad(){
         String fechaInicio = "25/04/2014";

@@ -14,14 +14,12 @@ package ec.ups.edu.clases;
  */
 public abstract class  Entrenador extends Persona{
    
-    private Persona persona;
     private double sueldo;
     private int edad;
     private String recomendaciones;
     
-    public Entrenador(Persona persona, double sueldo, int edad, String recomendaciones, int codigo, String nombre, String cedula, int telefono, String direccion, String correo) {
+    public Entrenador(double sueldo, int edad, String recomendaciones, int codigo, String nombre, String cedula, int telefono, String direccion, String correo) {
         super(codigo, nombre, cedula, telefono, direccion, correo);
-        this.persona = persona;
         this.sueldo = sueldo;
         this.edad = edad;
         this.recomendaciones = recomendaciones;
@@ -51,18 +49,11 @@ public abstract class  Entrenador extends Persona{
         this.recomendaciones = recomendaciones;
     }
 
-    public Persona getPersona() {
-        return persona;
-    }
-
-    public void setPersona(Persona persona) {
-        this.persona = persona;
-    }
     public abstract double calcularSueldo();
 
     @Override
     public String toString() {
-        return super.toString()+"Entrenador{" + "persona=" + persona + ", sueldo=" + sueldo + ", edad=" + edad + ", recomendaciones=" + recomendaciones + '}';
+        return super.toString()+"Entrenador{" + ", sueldo=" + sueldo + ", edad=" + edad + ", recomendaciones=" + recomendaciones + '}';
     }
 
    
