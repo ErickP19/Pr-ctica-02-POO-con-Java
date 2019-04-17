@@ -62,7 +62,8 @@ public abstract class Jugador extends Persona {
         this.posiciondeJuego = posiciondeJuego;
     }
 
-    public abstract int calcularEdad();
+   // public abstract int calcularEdad();
+     public abstract String verTelevision();
 
     @Override
     public String toString() {

@@ -52,6 +52,16 @@ public final class JugadorExtra extends Jugador implements Principal{
     public void setTitularsuplente(boolean titularsuplente) {
         this.titularsuplente = titularsuplente;
     }
+    public String Entrenando() {
+        return "\tJugador Extra " + this.getNombre() + "Esta en la banca";
+    }
+
+    public String descansar() {
+        return "\tJugador Extra  " + this.getNombre() + " está Jugando practica";
+    }
+    public String Lesionado() {
+        return "\tJugador Profesional " + super.getNombre() + " está dispuesto a jugar";
+    }
 
     @Override
     public String toString() {
@@ -127,6 +137,21 @@ public final class JugadorExtra extends Jugador implements Principal{
         System.out.println("El lagarto "+this.getNombre()+ " tiene: " + anios+" años "+ meses+" meses y "+ dias+" días \n");
         return 0;
         
+    }
+
+    @Override
+    public String verTelevision() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String comer() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String dormir() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

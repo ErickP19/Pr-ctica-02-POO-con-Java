@@ -139,4 +139,19 @@ public final class JugarProfesional extends Jugador implements Principal {
         System.out.println("El lagarto "+this.getNombre()+ " tiene: " + anios+" años "+ meses+" meses y "+ dias+" días \n");
         return 0;
         }
+
+    @Override
+    public String verTelevision() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String comer() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String dormir() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

@@ -15,8 +15,7 @@ import java.util.Scanner;
  * @author erics
  */
 public final class EntrenadorPsicologico extends Entrenador implements Principal  {
-   
-      
+  
        private String titulo;
        private String tituloCharlas;
        private Date FechaContratacion;
@@ -29,6 +28,8 @@ public final class EntrenadorPsicologico extends Entrenador implements Principal
         this.tituloCharlas = tituloCharlas;
         this.FechaContratacion = FechaContratacion;
     }
+
+    
        // get and set
     public String getTitulo() {
         return titulo;
@@ -80,5 +81,17 @@ public final class EntrenadorPsicologico extends Entrenador implements Principal
 		}
 		return resultado;
 	}
+
+    @Override
+    public String responderMensajes() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String dormir() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+   
     }
 

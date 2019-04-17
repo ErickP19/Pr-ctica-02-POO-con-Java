@@ -49,7 +49,9 @@ public abstract class  Entrenador extends Persona{
         this.recomendaciones = recomendaciones;
     }
 
-    public abstract double calcularSueldo();
+    //public abstract double calcularSueldo();
+    
+     public abstract String responderMensajes();
 
     @Override
     public String toString() {

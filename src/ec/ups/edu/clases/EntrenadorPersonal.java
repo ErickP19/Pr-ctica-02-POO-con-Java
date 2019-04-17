@@ -90,6 +90,16 @@ public final class EntrenadorPersonal extends Entrenador implements Principal{
 		}
 		return resultado;
 	}
+
+    @Override
+    public String responderMensajes() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String dormir() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
         
     }
 
