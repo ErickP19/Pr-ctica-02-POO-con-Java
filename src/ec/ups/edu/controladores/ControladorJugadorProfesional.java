@@ -33,7 +33,7 @@ public class ControladorJugadorProfesional {
         return null;
     }
     
-    public void update(EntrenadorPsicologico objeto){
+    public void update(JugarProfesional objeto){
         for (int i = 0; i < lista.size(); i++) {
             JugarProfesional elemento = new JugarProfesional();
             if(elemento.getCodigo() == objeto.getCodigo()){

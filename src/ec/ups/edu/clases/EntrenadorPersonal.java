@@ -20,7 +20,12 @@ public final class EntrenadorPersonal extends Entrenador implements Principal{
         private String rutina;
        // private Date fechadeContratacion;
     
-        
+    /**
+     *
+     */
+    public EntrenadorPersonal(){
+            
+        }
         //constructor
 
     public EntrenadorPersonal(String titulo, String tipoIdioma, String rutina, double sueldo, int edad, String recomendaciones, int codigo, String nombre, String cedula, int telefono, String direccion, String correo) {
@@ -29,6 +34,8 @@ public final class EntrenadorPersonal extends Entrenador implements Principal{
         this.tipoIdioma = tipoIdioma;
         this.rutina = rutina;
     }
+
+    
 
     //get and set
     public String getTitulo() {

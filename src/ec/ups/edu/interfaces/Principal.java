@@ -10,7 +10,7 @@ package ec.ups.edu.interfaces;
  * @author erics
  */
 public interface Principal {
-     public abstract String comer();
+    public abstract String comer();
     
     public abstract String descansar();
     

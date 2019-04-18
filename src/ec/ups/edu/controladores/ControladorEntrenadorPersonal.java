@@ -6,6 +6,7 @@
 package ec.ups.edu.controladores;
 
 import ec.ups.edu.clases.EntrenadorPersonal;
+import ec.ups.edu.clases.EntrenadorPsicologico;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,6 +54,10 @@ public class ControladorEntrenadorPersonal {
                 break;
             }
         }
+    }
+
+    public void create(EntrenadorPsicologico entre1) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

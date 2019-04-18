@@ -20,6 +20,10 @@ public final class EntrenadorPsicologico extends Entrenador implements Principal
        private String tituloCharlas;
        private Date FechaContratacion;
        
+       public EntrenadorPsicologico(){
+           
+       }
+       
     // constructor
 
     public EntrenadorPsicologico(String titulo, String tituloCharlas, Date FechaContratacion, double sueldo, int edad, String recomendaciones, int codigo, String nombre, String cedula, int telefono, String direccion, String correo) {
@@ -28,9 +32,16 @@ public final class EntrenadorPsicologico extends Entrenador implements Principal
         this.tituloCharlas = tituloCharlas;
         this.FechaContratacion = FechaContratacion;
     }
-
     
-       // get and set
+    public String getTituloCharlas() {
+        return tituloCharlas;    
+    }
+
+    // get and set
+    public void setTituloCharlas(String tituloCharlas) {
+        this.tituloCharlas = tituloCharlas;
+    }
+
     public String getTitulo() {
         return titulo;
     }

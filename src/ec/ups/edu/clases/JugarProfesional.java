@@ -19,6 +19,10 @@ public final class JugarProfesional extends Jugador implements Principal {
         private double peso;
         private boolean titularsuplente;
         
+        public JugarProfesional(){
+            
+        }
+        
         //constructor
 
     public JugarProfesional(String lugardeNacimiento, double peso, boolean titularsuplente, int edad, double estatura, double salario, String posiciondeJuego, int codigo, String nombre, String cedula, int telefono, String direccion, String correo) {

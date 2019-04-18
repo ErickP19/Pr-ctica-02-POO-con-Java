@@ -18,6 +18,10 @@ public abstract class Jugador extends Persona {
         private double estatura;
         private double salario;
         private String posiciondeJuego;
+        
+        public Jugador(){
+            
+        }
       
 
         //constructor

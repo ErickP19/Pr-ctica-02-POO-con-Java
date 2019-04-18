@@ -6,6 +6,7 @@
 package ec.ups.edu.clases;
 
 import ec.ups.edu.interfaces.Principal;
+import java.util.Objects;
 
 /**
  *
@@ -17,6 +18,10 @@ public final class JugadorExtra extends Jugador implements Principal{
         private String lugardeNacimiento;
         private double peso;
         private boolean titularsuplente;
+        
+        public JugadorExtra(){
+            
+        }
             //constructor
 
     public JugadorExtra(String lugardeNacimiento, double peso, boolean titularsuplente, int edad, double estatura, double salario, String posiciondeJuego, int codigo, String nombre, String cedula, int telefono, String direccion, String correo) {
@@ -154,4 +159,38 @@ public final class JugadorExtra extends Jugador implements Principal{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 73 * hash + Objects.hashCode(this.lugardeNacimiento);
+        hash = 73 * hash + (int) (Double.doubleToLongBits(this.peso) ^ (Double.doubleToLongBits(this.peso) >>> 32));
+        hash = 73 * hash + (this.titularsuplente ? 1 : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final JugadorExtra other = (JugadorExtra) obj;
+        if (Double.doubleToLongBits(this.peso) != Double.doubleToLongBits(other.peso)) {
+            return false;
+        }
+        if (this.titularsuplente != other.titularsuplente) {
+            return false;
+        }
+        if (!Objects.equals(this.lugardeNacimiento, other.lugardeNacimiento)) {
+            return false;
+        }
+        return true;
+    }
+
+    
 }

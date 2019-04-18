@@ -5,6 +5,8 @@
  */
 package ec.ups.edu.clases;
 
+import java.util.Objects;
+
 /**
  *
  * @author erics
@@ -22,6 +24,12 @@ public  class Persona   {
     private String correo;
     
          //contructor
+    
+    public Persona(){
+        
+    }
+    
+    
     public Persona(int codigo, String nombre, String cedula, int telefono, String direccion, String correo)
     {
    
@@ -88,5 +96,31 @@ public  class Persona   {
     public String toString() {
         return "Persona{" + "codigo=" + codigo + ", nombre=" + nombre + ", cedula=" + cedula + ", telefono=" + telefono + ", direccion=" + direccion + ", correo=" + correo + '}';
     }
-    
-}
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 71 * hash + this.codigo;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Persona other = (Persona) obj;
+        if (this.codigo != other.codigo) {
+            return false;
+        }
+        return true;
+    }
+            
+  }
+

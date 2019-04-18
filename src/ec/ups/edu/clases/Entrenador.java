@@ -18,6 +18,10 @@ public abstract class  Entrenador extends Persona{
     private int edad;
     private String recomendaciones;
     
+    public Entrenador(){
+        
+    }
+    
     public Entrenador(double sueldo, int edad, String recomendaciones, int codigo, String nombre, String cedula, int telefono, String direccion, String correo) {
         super(codigo, nombre, cedula, telefono, direccion, correo);
         this.sueldo = sueldo;

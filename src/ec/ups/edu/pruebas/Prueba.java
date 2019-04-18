@@ -14,7 +14,9 @@ import ec.ups.edu.clases.JugarProfesional;
 import ec.ups.edu.clases.Persona;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  *
@@ -28,7 +30,15 @@ public class Prueba {
         System.out.println(entre);
         System.out.println("\t" + entre.comer());
         System.out.println("\t" + entre.descansar());
-        System.out.println("\t" + entre.trabajar());     
+        System.out.println("\t" + entre.trabajar()); 
+         EntrenadorPersonal entre2 = new EntrenadorPersonal("licenciado","habla ingles","calentamiento",254,12,"buen entrenador muy bn preparado",1,"Jorge Parra","0123512312",568323434,"Gualaceo","Eruicasd123123");
+        if(entre.equals(entre2)){
+            System.out.println("Son iguales");
+            
+        }else{
+            System.out.println("No son iguales");
+            
+        }
      EntrenadorPsicologico entre1 = new EntrenadorPsicologico("Lcdo Nutrisionista y Lcdo Psicologo","Manejo de Ira",fechacontratacion.getTime(),250,25,"Exelente Psicologo para los jugadores ",2,"Jorge Matute","048154848",995666,"Gualaceo","Es@gmail.com");
         System.out.println(entre1);
         System.out.println("\t" + entre1.comer());
@@ -44,13 +54,30 @@ public class Prueba {
         System.out.println("\t" + ju1.Entrenando());
         System.out.println("\t" + ju1.Lesionado());
         System.out.println("\t" + ju1.descansar());
-    
-    List<Persona> lista = new ArrayList<>();
+    JugadorExtra ju2 = new JugadorExtra ("Gualaceo",123,false,22,166,280,"defensa ",3,"Roldan carlos","56265220",5548481,"Cuenca","juana@gmail.com") ;
+        if(ju1.equals(ju2)){
+            System.out.println("Son iguales");
+        }else{
+            System.out.println("No son iguales");
+        }
+        
+        Set<JugadorExtra> lista = new HashSet<>();
+            lista.add(ju1);
+            lista.add(ju2);
+          for(JugadorExtra jugador : lista){
+              System.out.println("jugador:"+jugador.getNombre());
+          }
+          if(lista.contains(ju1)){
+              System.out.println("Si existe!");
+          }
+              
+             /*   
+        List<Persona> lista = new ArrayList<>();
         lista.add(entre);
         lista.add(entre1);
         lista.add(ju);
         lista.add(ju1);
-    
+    */
         
      System.out.println("\n------------------Downcasting con instanceof--------------");
        for (Persona persona : lista) {
