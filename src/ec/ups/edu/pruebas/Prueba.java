@@ -24,6 +24,7 @@ import java.util.Set;
  */
 public class Prueba {
     public static void main (String args []){
+        /*
         
      GregorianCalendar fechacontratacion = new GregorianCalendar(2001, 8, 16);
      EntrenadorPersonal entre = new EntrenadorPersonal("ingeniero","habla ingles","calentamiento",254,12,"buen entrenador muy bn preparado",1,"Jorge Parra","0123512312",568323434,"Gualaceo","Eruicasd123123");
@@ -71,13 +72,13 @@ public class Prueba {
               System.out.println("Si existe!");
           }
               
-             /*   
+               
         List<Persona> lista = new ArrayList<>();
         lista.add(entre);
         lista.add(entre1);
         lista.add(ju);
         lista.add(ju1);
-    */
+    
         
      System.out.println("\n------------------Downcasting con instanceof--------------");
        for (Persona persona : lista) {
@@ -121,9 +122,9 @@ public class Prueba {
         System.out.println(anonimo2.verTelevision());
     }
      
-        
+        */
        
     }
-    
+} 
     
 
