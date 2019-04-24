@@ -111,12 +111,12 @@ public class Inicio {
                                 String re = dato.next();
                                 entre.setRecomendaciones(re);
                                 System.out.println("\n");
-
+/*
                                 System.out.println("Ingrese codigo entrenador");
-                                String co = dato.nextLine();
-                                entre.setCodigo(ed);
+                                String co = dato.next();
+                                entre.s
                                 System.out.println("\n");
-
+*/
                                 System.out.println("Ingrese nombre del entrenador");
                                 String no = dato.next();
                                 entre.setNombre(no);
@@ -139,7 +139,7 @@ public class Inicio {
 
                                 System.out.println("Ingresse correo electronico ");
                                 String c = dato.next();
-                                entre.setCorreo(co);
+                                entre.setCorreo(c);
                                 System.out.println("\n");
                                 controladorEntrenador.create(entre);
                                 
@@ -147,7 +147,7 @@ public class Inicio {
                                 break;
                             case 2:
                                 System.out.println("Has seleccionado la opción 'Read'");
-                                System.out.println("Ingrese el usuario a leer");
+                                System.out.println("Ingrese el codigo a leer");
                                 int codigo = dato.nextInt();
                                 System.out.println(controladorEntrenador.read(codigo));
                                 break;
@@ -177,12 +177,12 @@ public class Inicio {
                                 String re1 = dato.next();
                                 entre.setRecomendaciones(re1);
                                 System.out.println("\n");
-
+/*
                                 System.out.println("Ingrese codigo entrenador");
-                                String co1 = dato.nextLine();
+                                String co1 = dato.next();
                                 entre.setCodigo(ed1);
                                 System.out.println("\n");
-
+*/
                                 System.out.println("Ingrese nombre del entrenador");
                                 String no1 = dato.next();
                                 entre.setNombre(no1);
@@ -205,7 +205,7 @@ public class Inicio {
 
                                 System.out.println("Ingresse correo electronico ");
                                 String c1 = dato.next();
-                                entre.setCorreo(co1);
+                                entre.setCorreo(c1);
                                 System.out.println("\n");
 
                                 controladorEntrenador.update(entre);
@@ -288,12 +288,12 @@ public class Inicio {
                                 String co = dato.next();
                                 entre1.setRecomendaciones(co);
                                 System.out.println("\n");
-
+/*
                                 System.out.println("Ingrese codigo del entrenador");
                                 int c = dato.nextInt();
                                 entre1.setCodigo(c);
                                 System.out.println("\n");
-
+*/
                                 System.out.println("Ingrese nombre del entrenador");
                                 String nom = dato.next();
                                 entre1.setNombre(nom);
@@ -369,12 +369,12 @@ public class Inicio {
                                 String co1 = dato.next();
                                 entre1.setRecomendaciones(co1);
                                 System.out.println("\n");
-
+/*
                                 System.out.println("Ingrese codigo del entrenador");
                                 int c2 = dato.nextInt();
                                 entre1.setCodigo(c2);
                                 System.out.println("\n");
-
+*/
                                 System.out.println("Ingrese nombre del entrenador");
                                 String nom1 = dato.next();
                                 entre1.setNombre(nom1);
@@ -473,12 +473,12 @@ public class Inicio {
                                 String po = dato.next();
                                 ju.setPosiciondeJuego(po);
                                 System.out.println("\n");
-
+/*
                                System.out.println("Ingrese codigo del entrenador");
                                 int c = dato.nextInt();
                                 ju.setCodigo(c);
                                 System.out.println("\n");
-
+*/
                                 System.out.println("Ingrese nombre del entrenador");
                                 String nom = dato.next();
                                 ju.setNombre(nom);
@@ -548,12 +548,12 @@ public class Inicio {
                                 String po11 = dato.next();
                                 ju.setPosiciondeJuego(po11);
                                 System.out.println("\n");
-
+/*
                                System.out.println("Ingrese codigo del entrenador");
                                 int c11 = dato.nextInt();
                                 ju.setCodigo(c11);
                                 System.out.println("\n");
-
+*/
                                 System.out.println("Ingrese nombre del entrenador");
                                 String nom1 = dato.next();
                                 ju.setNombre(nom1);
@@ -652,12 +652,12 @@ public class Inicio {
                                 String po = dato.next();
                                 j.setPosiciondeJuego(po);
                                 System.out.println("\n");
-
+/*
                                System.out.println("Ingrese codigo del entrenador");
                                 int c = dato.nextInt();
                                 j.setCodigo(c);
                                 System.out.println("\n");
-
+*/
                                 System.out.println("Ingrese nombre del entrenador");
                                 String nom = dato.next();
                                 j.setNombre(nom);
@@ -727,12 +727,12 @@ public class Inicio {
                                 String po1 = dato.next();
                                 j.setPosiciondeJuego(po1);
                                 System.out.println("\n");
-
+/*
                                System.out.println("Ingrese codigo del entrenador");
                                 int c11= dato.nextInt();
                                 j.setCodigo(c11);
                                 System.out.println("\n");
-
+*/
                                 System.out.println("Ingrese nombre del entrenador");
                                 String nom1 = dato.next();
                                 j.setNombre(nom1);

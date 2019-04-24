@@ -7,27 +7,30 @@ package ec.ups.edu.controladores;
 
 import ec.ups.edu.clases.JugarProfesional;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
  * @author erics
  */
-public class ControladorJugadorProfesional {
-    private List<JugarProfesional> lista;
-    private int codigo;
-    public ControladorJugadorProfesional() {
-        lista=new ArrayList<>();
-        codigo=1;
+public class ControladorMap { 
+    
+  private Map<Integer ,JugarProfesional> lista;
+  private int codigo;
+    public ControladorMap() {
+        lista=new HashMap<>();
+        codigo = 1;
     }
     
     public void create(JugarProfesional  objeto){
         objeto.setCodigo(codigo);
-        codigo++;
-        lista.add(objeto);
+        codigo ++;
+        lista.keySet();
         
     }
-    
+    /*
     public JugarProfesional read(int codigo){
         for (JugarProfesional juga1 : lista){
             if (juga1.getCodigo() == codigo){
@@ -57,5 +60,6 @@ public class ControladorJugadorProfesional {
             }
         }
     }
+    */
     
 }
